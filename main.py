@@ -1,5 +1,5 @@
+import os
 import keep_alive
-
 import discord
 import logging
 import asyncio
@@ -8,6 +8,7 @@ from bs4 import BeautifulSoup
 from discord.ext import commands
 from game import Game
 
+TOKEN = os.environ['TOKEN']
 prefix = "ita!"
 client = commands.Bot(command_prefix=prefix)
 client.remove_command("help")
@@ -266,5 +267,4 @@ async def t(ctx, *args):
 
 
 keep_alive.keep_alive()
-client.run(
-    'OTA5MDA1NDc0NzA2MzYyNDM4.YY9_UQ.NAKHYKv5XnZw-53xeirO1KWN_ew') 
+client.run(TOKEN) 
